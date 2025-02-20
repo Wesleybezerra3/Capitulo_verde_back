@@ -4,7 +4,6 @@ const bcrypt = require("bcrypt");
 const { json } = require("sequelize");
 
 const SECRET_KEY =process.env.JWT_KEY;
-console.log("SECRET KEY:", SECRET_KEY);
 
 const generateToken = (user) => {
   return jwt.sign({ id: user.id, nome: user.nome }, SECRET_KEY, {
